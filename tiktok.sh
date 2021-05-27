@@ -11,4 +11,4 @@ for f in blur/*.mp4; do echo "file $f" >> file_list.txt ; done
 ffmpeg -f concat -safe 0 -i file_list.txt final.mp4
 #rm -rf blur
 
-python2 /home/mohammeds/Videos/TikTok/upload.py --file="final.mp4" --title="Funny TikTok Compilation" --description="Buy my merchandise - asir.dev" --keywords="tiktok,cringe" --category="22" --privacyStatus="public"
+python3 /home/mohammeds/Videos/TikTok/upload.py --file="final.mp4" --title="Funny TikTok Compilation" --description="Buy my merchandise - asir.dev" --keywords="tiktok,cringe" --category="22" --privacyStatus="public"
