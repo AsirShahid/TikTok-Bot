@@ -1,6 +1,8 @@
 #!/bin/bash
 mkdir -p /home/mohammeds/Videos/TikTok/TikTokVideo/"$(date +%Y-%m-%d)"T"$(date +%R:%S)"-Video && cd $_
 mkdir -p blur
+cp /home/mohammeds/Videos/TikTok/client_secrets.json .
+
 youtube-dl $(curl -s -H "User-agent: 'your bot 0.1'" https://www.reddit.com/r/TikTokCringe/hot.json?limit=25 | jq '.' | grep url_overridden_by_dest | grep -Eoh "https:\/\/v\.redd\.it\/\w{13}")
 for f in *.mp4;
 do
